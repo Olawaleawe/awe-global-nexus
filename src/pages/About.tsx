@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/SectionHeading";
 import { MapPin, BookOpen, Award, Globe } from "lucide-react";
+import profPhoto from "@/assets/prof-awe.jpg";
 
 const milestones = [
   { year: "Nigeria", desc: "Early academic career and foundational statistical research." },
@@ -13,12 +14,22 @@ const About = () => (
   <div>
     {/* Header */}
     <section className="bg-primary section-padding">
-      <div className="section-container text-center">
-        <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">About</p>
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Prof. Olushina Olawale Awe</h1>
-        <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-          Professor of Statistics & Data Science | Global Thought Leader in AI, Civic Data Science, and Statistical Education
-        </p>
+      <div className="section-container grid md:grid-cols-[auto_1fr] gap-10 items-center">
+        <div className="relative mx-auto">
+          <div className="absolute -inset-3 bg-gradient-to-br from-accent/40 to-transparent rounded-full blur-2xl" />
+          <img
+            src={profPhoto}
+            alt="Professor Olushina Olawale Awe"
+            className="relative w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-accent/60 shadow-2xl"
+          />
+        </div>
+        <div className="text-center md:text-left">
+          <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">About</p>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Prof. Olushina Olawale Awe</h1>
+          <p className="text-primary-foreground/70 text-lg max-w-2xl">
+            Professor of Statistics & Data Science | Global Thought Leader in AI, Civic Data Science, and Statistical Education
+          </p>
+        </div>
       </div>
     </section>
 
