@@ -90,7 +90,7 @@ const Index = () => (
     {/* Focus Areas */}
     <section className="section-padding bg-background">
       <div className="section-container">
-        <SectionHeading title="Research Focus Areas" subtitle="Driving innovation at the intersection of statistics, AI, and societal impact." />
+        <SectionHeading title="Research Focus Areas" subtitle="Where rigorous statistical theory meets real-world societal impact." />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {focusAreas.map((a) => (
             <div key={a.title} className="card-elevated p-6 group">

@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom";
 
+const profiles = [
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=_p_FZKcAAAAJ&hl=en" },
+  { label: "ORCID", href: "https://orcid.org/0000-0002-0442-4519" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/o-olawale-awe" },
+  { label: "Humboldt Network", href: "https://www.humboldt-foundation.de/en/connect/explore-the-humboldt-network/singleview/1243593/prof-dr-olushina-olawale-awe" },
+  { label: "The Conversation", href: "https://theconversation.com/profiles/olushina-olawale-awe-1470282" },
+  { label: "IDEAS / RePEc", href: "https://ideas.repec.org/e/paw23.html" },
+  { label: "FAPESP", href: "http://bv.fapesp.br/en/pesquisador/715333/olushina-olawale-awe/" },
+  { label: "ADA Global Academy", href: "https://adaglobalacademy.com/meet-the-team/professor-olawale-awe/" },
+];
+
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground">
     <div className="section-container py-12">
@@ -27,10 +38,14 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-3 text-accent">Connect</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-accent transition-colors">Google Scholar</a></li>
-            <li><a href="https://www.researchgate.net" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-accent transition-colors">ResearchGate</a></li>
-            <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-accent transition-colors">LinkedIn</a></li>
+          <ul className="space-y-2 text-sm grid grid-cols-2 gap-x-4">
+            {profiles.map((p) => (
+              <li key={p.label}>
+                <a href={p.href} target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  {p.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
