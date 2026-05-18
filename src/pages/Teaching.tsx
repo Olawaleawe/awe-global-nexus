@@ -33,7 +33,7 @@ const Teaching = () => (
         <blockquote className="text-2xl font-heading italic text-foreground mb-2">
           "Data literacy as a tool for empowerment and democracy"
         </blockquote>
-        <p className="text-muted-foreground">— Teaching Philosophy</p>
+        <p className="text-muted-foreground">Teaching Philosophy</p>
       </div>
     </section>
 
