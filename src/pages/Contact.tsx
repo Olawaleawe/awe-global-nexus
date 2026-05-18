@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import SectionHeading from "@/components/SectionHeading";
-import { Mail, ExternalLink, Send } from "lucide-react";
+import { Mail, ExternalLink, Send, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -54,15 +54,30 @@ const Contact = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-foreground mb-1 text-sm">Academic Email</h4>
-                  <a href="mailto:oawe@example.edu" className="text-accent hover:underline text-sm flex items-center gap-1">
-                    <Mail size={14} /> oawe@example.edu
+                  <a href="mailto:olushina-awe@ph-ludwigsburg.de" className="text-accent hover:underline text-sm flex items-center gap-1">
+                    <Mail size={14} /> olushina-awe@ph-ludwigsburg.de
                   </a>
+                  <a href="mailto:olawaleawe@gmail.com" className="text-accent hover:underline text-sm flex items-center gap-1 mt-1">
+                    <Mail size={14} /> olawaleawe@gmail.com
+                  </a>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1 text-sm">Phone</h4>
+                  <a href="tel:+4915203693944" className="text-muted-foreground hover:text-accent text-sm flex items-center gap-1">
+                    <Phone size={14} /> +49 152 03693944
+                  </a>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1 text-sm">Location</h4>
+                  <p className="text-muted-foreground text-sm flex items-center gap-1">
+                    <MapPin size={14} /> Ludwigsburg, Germany
+                  </p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-2 text-sm">Profiles</h4>
                   <ul className="space-y-2">
                     {[
-                      { label: "LinkedIn", href: "https://www.linkedin.com" },
+                      { label: "LinkedIn", href: "https://www.linkedin.com/in/o-olawale-awe" },
                       { label: "Google Scholar", href: "https://scholar.google.com" },
                       { label: "ResearchGate", href: "https://www.researchgate.net" },
                     ].map((link) => (
