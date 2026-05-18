@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb } from "lucide-react";
-import heroImage from "@/assets/hero-academic.jpg";
+import heroImage from "@/assets/hero-datascience.jpg";
+import profPhoto from "@/assets/prof-awe.jpg";
 
 const highlights = [
   { icon: FileText, value: "80+", label: "Scholarly Publications" },
@@ -36,24 +37,36 @@ const Index = () => (
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/60" />
       </div>
       <div className="relative section-container py-20 md:py-32">
-        <div className="max-w-2xl">
-          <p className="text-accent font-semibold tracking-wider uppercase text-sm mb-4 animate-fade-in">Professor of Statistics & Data Science</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+        <div className="grid lg:grid-cols-[1.6fr_1fr] gap-12 items-center">
+          <div className="max-w-2xl">
+            <p className="text-accent font-semibold tracking-wider uppercase text-sm mb-4 animate-fade-in">Professor of Statistics & Data Science</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Advancing Statistics, Data Science, and Explainable AI for Global Impact
-          </h1>
-          <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            </h1>
+            <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Professor Olushina Olawale Awe is a globally recognized statistician and data scientist working at the intersection of machine learning, civic engagement, and interpretable AI.
-          </p>
-          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button asChild size="lg" variant="hero">
-              <Link to="/research">View Research</Link>
-            </Button>
-            <Button asChild size="lg" variant="hero-outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              <Link to="/consulting">Collaborate</Link>
-            </Button>
-            <Button asChild size="lg" variant="hero-outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              <Link to="/talks">Invite as Speaker</Link>
-            </Button>
+            </p>
+            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              <Button asChild size="lg" variant="hero">
+                <Link to="/research">View Research</Link>
+              </Button>
+              <Button asChild size="lg" variant="hero-outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Link to="/consulting">Collaborate</Link>
+              </Button>
+              <Button asChild size="lg" variant="hero-outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Link to="/talks">Invite as Speaker</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="hidden lg:flex justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-accent/40 to-transparent rounded-full blur-2xl" />
+              <img
+                src={profPhoto}
+                alt="Professor Olushina Olawale Awe"
+                className="relative w-72 h-72 xl:w-80 xl:h-80 object-cover rounded-full border-4 border-accent/60 shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </div>
