@@ -67,9 +67,10 @@ const Research = () => (
         <SectionHeading title="Profiles & Databases" />
         <div className="flex flex-wrap justify-center gap-4">
           {[
-            { label: "Google Scholar", href: "https://scholar.google.com" },
-            { label: "Scopus", href: "https://www.scopus.com" },
-            { label: "ResearchGate", href: "https://www.researchgate.net" },
+            { label: "Google Scholar", href: "https://scholar.google.com/citations?user=_p_FZKcAAAAJ&hl=en" },
+            { label: "ORCID", href: "https://orcid.org/0000-0002-0442-4519" },
+            { label: "IDEAS / RePEc", href: "https://ideas.repec.org/e/paw23.html" },
+            { label: "Humboldt Network", href: "https://www.humboldt-foundation.de/en/connect/explore-the-humboldt-network/singleview/1243593/prof-dr-olushina-olawale-awe" },
           ].map((link) => (
             <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 card-elevated px-5 py-3 text-sm font-medium text-foreground hover:text-accent transition-colors">
               {link.label} <ExternalLink size={14} />

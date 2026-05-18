@@ -78,8 +78,9 @@ const Contact = () => {
                   <ul className="space-y-2">
                     {[
                       { label: "LinkedIn", href: "https://www.linkedin.com/in/o-olawale-awe" },
-                      { label: "Google Scholar", href: "https://scholar.google.com" },
-                      { label: "ResearchGate", href: "https://www.researchgate.net" },
+                      { label: "Google Scholar", href: "https://scholar.google.com/citations?user=_p_FZKcAAAAJ&hl=en" },
+                      { label: "ORCID", href: "https://orcid.org/0000-0002-0442-4519" },
+                      { label: "The Conversation", href: "https://theconversation.com/profiles/olushina-olawale-awe-1470282" },
                     ].map((link) => (
                       <li key={link.label}>
                         <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors text-sm flex items-center gap-1">
