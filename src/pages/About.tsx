@@ -3,11 +3,11 @@ import { MapPin, BookOpen, Award, Globe } from "lucide-react";
 import profPhoto from "@/assets/prof-awe.jpg";
 
 const milestones = [
-  { year: "Nigeria", desc: "Early academic career and foundational statistical research." },
-  { year: "USA", desc: "Advanced studies and research collaborations at leading institutions." },
-  { year: "Brazil", desc: "International teaching and cross-continental partnerships." },
-  { year: "Germany", desc: "Alexander von Humboldt Foundation Professorship and European research leadership." },
-  { year: "Global", desc: "Leading international networks—ISI, IASE, LISA 2020—across 40+ countries." },
+  { year: "Nigeria", desc: "B.Sc. & M.Sc. (Statistics, University of Ibadan/Ilorin); PhD Statistics, University of Ibadan (2016). Lecturer at Obafemi Awolowo University and Anchor University Lagos." },
+  { year: "USA", desc: "Visiting J1 Scholar at Virginia Tech (2013–2014); Certificate of Excellence in Interdisciplinary Statistics and Data Science." },
+  { year: "Brazil", desc: "CAPES Postdoc at UFBA (2020–2021); FAPESP International Research Fellow at UNICAMP (2021–2023); MBA in Data Science & Analytics, University of São Paulo (2023–2025); Research Professor & ML Team Leader at UFBA (2023–present)." },
+  { year: "Germany", desc: "Alexander von Humboldt Experienced Fellow and AvH Visiting Professor of Statistical and Data Science Literacy at Ludwigsburg University of Education (2025–present)." },
+  { year: "Global", desc: "Vice President of Global Statistical Engagements, LISA 2020 Global Network (USA); Council Member of the ISI; VP for Membership, ISBIS; Distinguished Professor of Data Science, Miva University." },
 ];
 
 const About = () => (
@@ -39,13 +39,13 @@ const About = () => (
         <SectionHeading title="Professional Biography" centered={false} />
         <div className="prose prose-lg text-muted-foreground space-y-4">
           <p>
-            Professor Olushina Olawale Awe is a distinguished statistician and data scientist whose work spans machine learning, explainable AI, civic data science, and statistical education. He holds a professorship supported by the Alexander von Humboldt Foundation in Germany and serves in leadership roles across the world's most prestigious statistical organizations.
+            Professor Olushina Olawale Awe is an internationally recognized statistician and data scientist with over 15 years of university-level teaching, research, and graduate supervision experience in machine learning, deep learning, and data science. He has authored <strong>100+ peer-reviewed publications</strong> and edited major scholarly volumes published by Springer and Taylor & Francis. His expertise spans functional and time-series data analysis, Bayesian and computational statistics, statistical learning, health data science, and interpretable AI—with applications in public health, economics, climate, and policy analytics.
           </p>
           <p>
-            As Vice President of the International Association for Statistical Education (IASE) and Council Member of the International Statistical Institute (ISI), Prof. Awe shapes global policy on data literacy, statistical capacity building, and AI governance. He is the Global Lead of the LISA 2020 Network, connecting statistical laboratories across developing nations.
+            He currently serves as <strong>Vice President of Global Statistical Engagements with the LISA 2020 Global Network</strong> (headquartered at the University of Colorado Boulder), <strong>Council Member of the International Statistical Institute (ISI, 2025–2029)</strong>, <strong>Vice President for Membership of ISBIS (2025–2027)</strong>, <strong>Fellow of the Royal Statistical Society (2025)</strong>, Chartered Statistician (CStat), and Accredited Professional Statistician of the American Statistical Association. Under his leadership, the LISA network has trained 225 statisticians, supported 9,429 researchers across 2,719 projects, and delivered 196 short courses to 3,748 participants.
           </p>
           <p>
-            His research philosophy centers on <em className="text-foreground font-medium">"bridging rigorous statistical theory with real-world impact"</em>—developing interpretable machine learning methods that serve democratic governance, public health, and equitable development.
+            His research agenda emphasizes <em className="text-foreground font-medium">rigorous statistical foundations for machine learning, interpretable and responsible AI, and scalable data-driven methods</em>, with a strong commitment to graduate training, interdisciplinary collaboration, and high-impact research that serves democratic governance, public health, and equitable development.
           </p>
         </div>
       </div>
@@ -77,9 +77,9 @@ const About = () => (
         <SectionHeading title="Leadership & Global Influence" />
         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
-            { icon: Award, title: "AvH Foundation Professor", desc: "Prestigious appointment advancing statistical research in Germany." },
-            { icon: Globe, title: "LISA 2020 Global Lead", desc: "Directing statistical consulting laboratories across developing countries." },
-            { icon: BookOpen, title: "ISI & IASE Leadership", desc: "Vice President of IASE and Council Member of ISI shaping global statistics." },
+            { icon: Award, title: "AvH Visiting Professor", desc: "Alexander von Humboldt Experienced Fellow at Ludwigsburg University of Education, Germany (2025–present)." },
+            { icon: Globe, title: "VP, LISA 2020 Global Network", desc: "Leading global statistical engagements, capacity building, and interdisciplinary collaboration." },
+            { icon: BookOpen, title: "ISI Council & FRSS", desc: "Council Member of the International Statistical Institute (2025–2029) and Fellow of the Royal Statistical Society." },
           ].map((item) => (
             <div key={item.title} className="card-elevated p-6 text-center">
               <item.icon className="mx-auto text-accent mb-3" size={32} />

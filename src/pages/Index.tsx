@@ -6,10 +6,10 @@ import heroImage from "@/assets/hero-datascience.jpg";
 import profPhoto from "@/assets/prof-awe.jpg";
 
 const highlights = [
-  { icon: FileText, value: "80+", label: "Scholarly Publications" },
-  { icon: Award, value: "VP", label: "IASE (Intl. Assoc. for Statistical Education)" },
-  { icon: Users, value: "Council", label: "International Statistical Institute (ISI)" },
-  { icon: Globe, value: "AvH", label: "Humboldt Foundation Professor" },
+  { icon: FileText, value: "100+", label: "Peer-Reviewed Publications" },
+  { icon: Award, value: "FRSS", label: "Fellow, Royal Statistical Society (2025)" },
+  { icon: Users, value: "ISI", label: "Council Member (2025–2029)" },
+  { icon: Globe, value: "AvH", label: "Humboldt Professor, PH Ludwigsburg" },
 ];
 
 const focusAreas = [
