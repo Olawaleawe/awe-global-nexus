@@ -7,7 +7,7 @@ const profiles = [
   { label: "Humboldt Network", href: "https://www.humboldt-foundation.de/en/connect/explore-the-humboldt-network/singleview/1243593/prof-dr-olushina-olawale-awe" },
   { label: "The Conversation", href: "https://theconversation.com/profiles/olushina-olawale-awe-1470282" },
   { label: "IDEAS / RePEc", href: "https://ideas.repec.org/e/paw23.html" },
-  { label: "FAPESP", href: "http://bv.fapesp.br/en/pesquisador/715333/olushina-olawale-awe/" },
+  { label: "LISA 2020 Network", href: "https://www.lisa2020.org/team" },
   { label: "ADA Global Academy", href: "https://adaglobalacademy.com/meet-the-team/professor-olawale-awe/" },
 ];
 
