@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Calendar, Tag } from "lucide-react";
 
 const posts = [

@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { BookOpen, Code, BarChart3, Globe, Quote } from "lucide-react";
 
 const courses = [

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { BarChart3, Brain, HeartPulse, FileSearch, CheckCircle } from "lucide-react";
 
 const services = [

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Brain, BarChart3, Globe, HeartPulse, ExternalLink } from "lucide-react";
 
 const themes = [
