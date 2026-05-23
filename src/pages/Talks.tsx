@@ -15,6 +15,11 @@ const talks = [
 
 const Talks = () => (
   <div>
+    <SEO
+      title="Talks & Keynotes | Prof. Olawale Awe"
+      description="Selected international keynotes and invited talks by Prof. Olawale Awe at ISI, JSM, ICOTS, Royal Statistical Society and the Bernoulli World Congress."
+      path="/talks"
+    />
     <section className="bg-primary section-padding">
       <div className="section-container text-center">
         <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Speaking</p>
