@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb } from "lucide-react";
 import heroImage from "@/assets/hero-datascience.jpg";
 import profPhoto from "@/assets/prof-awe.jpg";
@@ -30,6 +31,11 @@ const visionItems = [
 
 const Index = () => (
   <div>
+    <SEO
+      title="Prof. Olawale Awe | Statistician & Data Science Educator, Germany"
+      description="Personal academic website of Prof. O. Olawale Awe, Alexander von Humboldt Visiting Professor at Ludwigsburg University of Education. Expert in statistical literacy, data science education and AI literacy."
+      path="/"
+    />
     {/* Hero */}
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">

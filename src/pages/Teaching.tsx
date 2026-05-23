@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { BookOpen, Code, BarChart3, Globe, Quote } from "lucide-react";
 
 const courses = [
@@ -16,6 +17,11 @@ const programs = [
 
 const Teaching = () => (
   <div>
+    <SEO
+      title="Teaching | Data Science & Statistical Education — Prof. Awe"
+      description="Courses, MicroMasters programs, workshops and bootcamps led by Prof. Olawale Awe in data science, machine learning, statistical modeling and civic data science."
+      path="/teaching"
+    />
     <section className="bg-primary section-padding">
       <div className="section-container text-center">
         <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Education</p>

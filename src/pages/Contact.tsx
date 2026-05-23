@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Mail, ExternalLink, Send, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
@@ -21,6 +22,11 @@ const Contact = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact | Prof. Olawale Awe"
+        description="Get in touch with Prof. Olushina Olawale Awe for research collaborations, consulting, invited talks, and academic partnerships."
+        path="/contact"
+      />
       <section className="bg-primary section-padding">
         <div className="section-container text-center">
           <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Get in Touch</p>

@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Globe, GraduationCap, Building, Users } from "lucide-react";
 
 const initiatives = [
@@ -10,6 +11,11 @@ const initiatives = [
 
 const Initiatives = () => (
   <div>
+    <SEO
+      title="Global Initiatives | LISA 2020, ADA Global Academy — Prof. Awe"
+      description="Global capacity-building initiatives led by Prof. Olawale Awe: LISA 2020 Global Network, ADA Global Academy, LISAC & AULISSDA labs across Africa, Asia and Latin America."
+      path="/initiatives"
+    />
     <section className="bg-primary section-padding">
       <div className="section-container text-center">
         <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Global Impact</p>

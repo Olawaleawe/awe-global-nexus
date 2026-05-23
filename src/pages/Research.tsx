@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { Brain, BarChart3, Globe, HeartPulse, ExternalLink } from "lucide-react";
 
 const themes = [
@@ -20,6 +21,11 @@ const publications = [
 
 const Research = () => (
   <div>
+    <SEO
+      title="Research | Explainable AI, Statistical Learning — Prof. Awe"
+      description="Research themes and publications of Prof. Olawale Awe: explainable AI, statistical learning under complex dependencies, civic data science, and health & malaria modeling."
+      path="/research"
+    />
     <section className="bg-primary section-padding">
       <div className="section-container text-center">
         <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Research</p>

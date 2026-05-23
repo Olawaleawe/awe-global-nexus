@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import SEO from "@/components/SEO";
 import { BarChart3, Brain, HeartPulse, FileSearch, CheckCircle } from "lucide-react";
 
 const services = [
@@ -19,6 +20,11 @@ const impacts = [
 
 const Consulting = () => (
   <div>
+    <SEO
+      title="Consulting | Data Science, AI & Health Analytics — Prof. Awe"
+      description="Statistical and data science consulting by Prof. Olawale Awe: research design, AI for public policy, health analytics and capacity building for global institutions."
+      path="/consulting"
+    />
     <section className="bg-primary section-padding">
       <div className="section-container text-center">
         <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Services</p>
