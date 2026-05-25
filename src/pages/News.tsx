@@ -7,15 +7,15 @@ const posts = [
   { title: "LISA 2020: A Decade of Statistical Capacity Building", category: "Announcements", date: "January 2024", excerpt: "Reflecting on ten years of building statistical consulting laboratories across developing countries and the lessons learned." },
   { title: "Data Literacy as the Foundation of Modern Democracy", category: "Data for Democracy", date: "November 2023", excerpt: "Without data-literate citizens and policymakers, democratic institutions risk being undermined by misinformation and opaque algorithms." },
   { title: "The Role of Human-in-the-Loop Systems in Public Health", category: "Statistical Thinking", date: "September 2023", excerpt: "Combining expert judgment with machine learning to improve malaria surveillance and health resource allocation." },
-  { title: "Awarded Humboldt Foundation Professorship", category: "Announcements", date: "2025", excerpt: "Prof. Awe joins a prestigious cohort of international scholars supported by the Alexander von Humboldt Foundation, taking up an AvH Visiting Professorship at Ludwigsburg University of Education, Germany." },
+  { title: "Awarded Humboldt Foundation Professorship", category: "Announcements", date: "2025", excerpt: "Prof. Olushina O. Awe joins a prestigious cohort of international scholars supported by the Alexander von Humboldt Foundation, taking up an AvH Visiting Professorship at Ludwigsburg University of Education, Germany." },
   { title: "Bridging the Data Skills Gap in Sub-Saharan Africa", category: "Data for Democracy", date: "April 2023", excerpt: "Practical strategies and institutional models for scaling data science education in resource-constrained environments." },
 ];
 
 const News = () => (
   <div>
     <SEO
-      title="News & Insights | Prof. Olawale Awe"
-      description="Latest essays, announcements and commentary from Prof. Olawale Awe on explainable AI, statistical capacity building, civic data science and global research initiatives."
+      title="News & Insights | Prof. Olushina O. Awe"
+      description="Latest essays, announcements and commentary from Prof. Olushina O. Awe on explainable AI, statistical capacity building, civic data science and global research initiatives."
       path="/news"
     />
     <section className="bg-primary section-padding">

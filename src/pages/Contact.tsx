@@ -16,15 +16,15 @@ const Contact = () => {
       toast.error("Please fill in all required fields.");
       return;
     }
-    toast.success("Thank you for your message. Prof. Awe's team will respond shortly.");
+    toast.success("Thank you for your message. Prof. Olushina O. Awe's team will respond shortly.");
     setForm({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
     <div>
       <SEO
-        title="Contact | Prof. Olawale Awe"
-        description="Get in touch with Prof. Olushina Olawale Awe for research collaborations, consulting, invited talks, and academic partnerships."
+        title="Contact | Prof. Olushina O. Awe"
+        description="Get in touch with Prof. Olushina O. Awe for research collaborations, consulting, invited talks, and academic partnerships."
         path="/contact"
       />
       <section className="bg-primary section-padding">

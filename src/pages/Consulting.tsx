@@ -21,8 +21,8 @@ const impacts = [
 const Consulting = () => (
   <div>
     <SEO
-      title="Consulting | Data Science, AI & Health Analytics — Prof. Awe"
-      description="Statistical and data science consulting by Prof. Olawale Awe: research design, AI for public policy, health analytics and capacity building for global institutions."
+      title="Consulting | Data Science, AI & Health Analytics — Prof. Olushina O. Awe"
+      description="Statistical and data science consulting by Prof. Olushina O. Awe: research design, AI for public policy, health analytics and capacity building for global institutions."
       path="/consulting"
     />
     <section className="bg-primary section-padding">

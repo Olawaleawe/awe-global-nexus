@@ -12,8 +12,8 @@ const initiatives = [
 const Initiatives = () => (
   <div>
     <SEO
-      title="Global Initiatives | LISA 2020, ADA Global Academy — Prof. Awe"
-      description="Global capacity-building initiatives led by Prof. Olawale Awe: LISA 2020 Global Network, ADA Global Academy, LISAC & AULISSDA labs across Africa, Asia and Latin America."
+      title="Global Initiatives | LISA 2020, ADA Global Academy — Prof. Olushina O. Awe"
+      description="Global capacity-building initiatives led by Prof. Olushina O. Awe: LISA 2020 Global Network, ADA Global Academy, LISAC & AULISSDA labs across Africa, Asia and Latin America."
       path="/initiatives"
     />
     <section className="bg-primary section-padding">
