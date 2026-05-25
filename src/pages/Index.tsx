@@ -32,8 +32,8 @@ const visionItems = [
 const Index = () => (
   <div>
     <SEO
-      title="Prof. Olawale Awe | Statistician & Data Science Educator, Germany"
-      description="Personal academic website of Prof. O. Olawale Awe, Alexander von Humboldt Visiting Professor at Ludwigsburg University of Education. Expert in statistical literacy, data science education and AI literacy."
+      title="Prof. Olushina O. Awe | Statistician & Data Science Educator, Germany"
+      description="Personal academic website of Prof. Olushina O. Awe, Alexander von Humboldt Visiting Professor at Ludwigsburg University of Education. Expert in statistical literacy, data science education and AI literacy."
       path="/"
     />
     {/* Hero */}

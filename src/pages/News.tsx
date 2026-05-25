@@ -14,8 +14,8 @@ const posts = [
 const News = () => (
   <div>
     <SEO
-      title="News & Insights | Prof. Olawale Awe"
-      description="Latest essays, announcements and commentary from Prof. Olawale Awe on explainable AI, statistical capacity building, civic data science and global research initiatives."
+      title="News & Insights | Prof. Olushina O. Awe"
+      description="Latest essays, announcements and commentary from Prof. Olushina O. Awe on explainable AI, statistical capacity building, civic data science and global research initiatives."
       path="/news"
     />
     <section className="bg-primary section-padding">

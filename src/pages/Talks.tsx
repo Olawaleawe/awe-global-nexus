@@ -16,8 +16,8 @@ const talks = [
 const Talks = () => (
   <div>
     <SEO
-      title="Talks & Keynotes | Prof. Olawale Awe"
-      description="Selected international keynotes and invited talks by Prof. Olawale Awe at ISI, JSM, ICOTS, Royal Statistical Society and the Bernoulli World Congress."
+      title="Talks & Keynotes | Prof. Olushina O. Awe"
+      description="Selected international keynotes and invited talks by Prof. Olushina O. Awe at ISI, JSM, ICOTS, Royal Statistical Society and the Bernoulli World Congress."
       path="/talks"
     />
     <section className="bg-primary section-padding">
@@ -73,7 +73,7 @@ const Talks = () => (
     <section className="section-padding bg-primary">
       <div className="section-container text-center">
         <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary-foreground mb-4">
-          Invite Prof. Awe to Speak
+          Invite Prof. Olushina O. Awe to Speak
         </h2>
         <p className="text-primary-foreground/70 mb-6 max-w-lg mx-auto text-sm">
           Available for keynotes, panel discussions, and workshops on AI, data science, and statistical education.

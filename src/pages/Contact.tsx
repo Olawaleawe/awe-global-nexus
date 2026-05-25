@@ -23,8 +23,8 @@ const Contact = () => {
   return (
     <div>
       <SEO
-        title="Contact | Prof. Olawale Awe"
-        description="Get in touch with Prof. Olushina Olawale Awe for research collaborations, consulting, invited talks, and academic partnerships."
+        title="Contact | Prof. Olushina O. Awe"
+        description="Get in touch with Prof. Olushina O. Awe for research collaborations, consulting, invited talks, and academic partnerships."
         path="/contact"
       />
       <section className="bg-primary section-padding">
