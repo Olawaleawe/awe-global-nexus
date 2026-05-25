@@ -14,7 +14,7 @@ const milestones = [
 const About = () => (
   <div>
     <SEO
-      title="About Prof. Olawale Awe | Humboldt Professor, Statistician"
+      title="About Prof. Olushina O. Awe | Humboldt Professor, Statistician"
       description="Biography of Prof. Olushina Olawale Awe — Alexander von Humboldt Visiting Professor at Ludwigsburg University of Education, with career stops in Nigeria, USA, Brazil and Germany."
       path="/about"
     />

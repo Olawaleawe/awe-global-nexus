@@ -16,7 +16,7 @@ const Contact = () => {
       toast.error("Please fill in all required fields.");
       return;
     }
-    toast.success("Thank you for your message. Prof. Awe's team will respond shortly.");
+    toast.success("Thank you for your message. Prof. Olushina O. Awe's team will respond shortly.");
     setForm({ name: "", email: "", subject: "", message: "" });
   };
 
