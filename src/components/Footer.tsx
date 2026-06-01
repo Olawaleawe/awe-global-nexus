@@ -16,7 +16,7 @@ const Footer = () => (
     <div className="section-container py-12">
       <div className="grid md:grid-cols-3 gap-8">
         <div>
-          <h3 className="font-heading text-xl font-bold mb-3">Prof. Olushina O. Awe</h3>
+          <h3 className="font-heading text-xl font-bold mb-3">Prof. Olushina Olawale Awe</h3>
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
             Professor of Statistics & Data Science. Global thought leader in Explainable AI, Civic Data Science, and Statistical Education.
           </p>
