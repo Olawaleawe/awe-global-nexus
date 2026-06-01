@@ -34,6 +34,9 @@ const Footer = () => (
                 <Link to={l.href} className="text-primary-foreground/70 hover:text-accent transition-colors">{l.label}</Link>
               </li>
             ))}
+            <li>
+              <a href="/CV-Prof-Olushina-Olawale-Awe.pdf" download className="text-primary-foreground/70 hover:text-accent transition-colors">Download CV</a>
+            </li>
           </ul>
         </div>
         <div>
