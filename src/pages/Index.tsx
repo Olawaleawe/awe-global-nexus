@@ -5,6 +5,7 @@ import SEO from "@/components/SEO";
 import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb } from "lucide-react";
 import heroImage from "@/assets/hero-datascience.jpg";
 import profPhoto from "@/assets/prof-awe.jpg";
+import germanPresidentPhoto from "@/assets/prof-awe-german-president.jpeg.asset.json";
 
 const highlights = [
   { icon: FileText, value: "100+", label: "Peer-Reviewed Publications" },
@@ -125,6 +126,29 @@ const Index = () => (
             </div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* Featured Moment */}
+    <section className="section-padding bg-background">
+      <div className="section-container">
+        <SectionHeading
+          title="A Notable Moment"
+          subtitle="Prof. Olushina Olawale Awe with H.E. Frank-Walter Steinmeier, President of the Federal Republic of Germany."
+        />
+        <figure className="max-w-4xl mx-auto">
+          <div className="overflow-hidden rounded-lg border border-border shadow-xl">
+            <img
+              src={germanPresidentPhoto.url}
+              alt="Prof. Olushina Olawale Awe with Frank-Walter Steinmeier, President of Germany"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+          <figcaption className="text-center text-sm text-muted-foreground mt-4 italic">
+            With H.E. Frank-Walter Steinmeier, President of the Federal Republic of Germany.
+          </figcaption>
+        </figure>
       </div>
     </section>
 
