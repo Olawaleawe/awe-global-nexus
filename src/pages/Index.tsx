@@ -11,7 +11,7 @@ const highlights = [
   { icon: FileText, value: "100+", label: "Peer-Reviewed Publications" },
   { icon: Award, value: "FRSS", label: "Fellow, Royal Statistical Society (2025)" },
   { icon: Users, value: "ISI", label: "Council Member (2025–2029)" },
-  { icon: Globe, value: "AvH", label: "Humboldt Professor, PH Ludwigsburg" },
+  { icon: Globe, value: "SaLLy", label: "Research Professor, UFBA, Brazil" },
 ];
 
 const focusAreas = [
