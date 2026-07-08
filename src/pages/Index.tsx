@@ -12,6 +12,7 @@ const highlights = [
   { icon: Award, value: "FRSS", label: "Fellow, Royal Statistical Society (2025)" },
   { icon: Users, value: "ISI", label: "Council Member (2025–2029)" },
   { icon: Globe, value: "SaLLy", label: "Research Professor, UFBA, Brazil" },
+  { icon: GraduationCap, value: "Miva", label: "Distinguished Professor, Miva University, Nigeria" },
 ];
 
 const focusAreas = [
