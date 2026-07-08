@@ -87,7 +87,7 @@ const Index = () => (
     {/* Highlights */}
     <section className="bg-card border-b border-border">
       <div className="section-container py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
           {highlights.map((h) => (
             <div key={h.label} className="text-center">
               <h.icon className="mx-auto mb-2 text-accent" size={28} />
