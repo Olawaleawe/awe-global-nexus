@@ -12,6 +12,7 @@ const highlights = [
   { icon: Award, value: "FRSS", label: "Fellow, Royal Statistical Society (2025)" },
   { icon: Users, value: "ISI", label: "Council Member (2025–2029)" },
   { icon: Globe, value: "SaLLy", label: "Research Professor, UFBA, Brazil" },
+  { icon: GraduationCap, value: "Miva", label: "Distinguished Professor, Miva University, Nigeria" },
 ];
 
 const focusAreas = [
@@ -85,7 +86,7 @@ const Index = () => (
     {/* Highlights */}
     <section className="bg-card border-b border-border">
       <div className="section-container py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
           {highlights.map((h) => (
             <div key={h.label} className="text-center">
               <h.icon className="mx-auto mb-2 text-accent" size={28} />
