@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const profiles = [
   { label: "Google Scholar", href: "https://scholar.google.com/citations?user=_p_FZKcAAAAJ&hl=en" },
