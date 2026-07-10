@@ -15,7 +15,7 @@ const About = () => (
   <div>
     <SEO
       title="About Prof. Olushina O. Awe | Humboldt Professor, Statistician"
-      description="Biography of Prof. Olushina Olawale Awe — Alexander von Humboldt Visiting Professor at Ludwigsburg University of Education, with career stops in Nigeria, USA, Brazil and Germany."
+      description="Biography of Prof. Olushina Olawale Awe - Alexander von Humboldt Visiting Professor at Ludwigsburg University of Education, with career stops in Nigeria, USA, Brazil and Germany."
       path="/about"
     />
     {/* Header */}

@@ -60,10 +60,13 @@ const Contact = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-foreground mb-1 text-sm">Academic Email</h4>
-                  <a href="mailto:olushina-awe@ph-ludwigsburg.de" className="text-accent hover:underline text-sm flex items-center gap-1">
-                    <Mail size={14} /> olushina-awe@ph-ludwigsburg.de
+                  <a href="mailto:olushina.awe@ph-ludwigsburg.de" className="text-accent hover:underline text-sm flex items-center gap-1">
+                    <Mail size={14} /> olushina.awe@ph-ludwigsburg.de
                   </a>
-                  <a href="mailto:olawaleawe@gmail.com" className="text-accent hover:underline text-sm flex items-center gap-1 mt-1">
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-1 text-sm">Personal Email</h4>
+                  <a href="mailto:olawaleawe@gmail.com" className="text-accent hover:underline text-sm flex items-center gap-1">
                     <Mail size={14} /> olawaleawe@gmail.com
                   </a>
                 </div>

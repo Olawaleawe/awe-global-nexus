@@ -22,7 +22,7 @@ const publications = [
 const Research = () => (
   <div>
     <SEO
-      title="Research | Explainable AI, Statistical Learning — Prof. Olushina O. Awe"
+      title="Research | Explainable AI, Statistical Learning - Prof. Olushina O. Awe"
       description="Research themes and publications of Prof. Olushina O. Awe: explainable AI, statistical learning under complex dependencies, civic data science, and health & malaria modeling."
       path="/research"
     />

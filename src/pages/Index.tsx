@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb } from "lucide-react";
+import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb, Mail, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-datascience.jpg";
 import profPhoto from "@/assets/prof-awe.jpg";
 import germanPresidentPhoto from "@/assets/prof-awe-german-president.jpeg.asset.json";
@@ -160,9 +160,20 @@ const Index = () => (
         <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">
           Partnering globally to build data-driven solutions for society
         </h2>
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+        <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
           Open to research collaborations, keynote speaking, consulting engagements, and institutional partnerships.
         </p>
+        <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground mb-8">
+          <a href="mailto:olushina.awe@ph-ludwigsburg.de" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Mail size={16} /> olushina.awe@ph-ludwigsburg.de
+          </a>
+          <a href="mailto:olawaleawe@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Mail size={16} /> olawaleawe@gmail.com
+          </a>
+          <a href="tel:+4915203693944" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <Phone size={16} /> +49 152 03693944
+          </a>
+        </div>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
             <Link to="/contact">Get in Touch</Link>
