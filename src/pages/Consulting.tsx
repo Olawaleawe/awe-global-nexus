@@ -201,7 +201,9 @@ const Consulting = () => {
           </form>
 
           <div className="mt-10 text-center text-sm text-[#444] space-y-1">
+            <p>Email: <a href="mailto:olushina.awe@ph-ludwigsburg.de" className="underline" style={{ color: NAVY }}>olushina.awe@ph-ludwigsburg.de</a></p>
             <p>Email: <a href="mailto:olawaleawe@gmail.com" className="underline" style={{ color: NAVY }}>olawaleawe@gmail.com</a></p>
+            <p>Mobile: <a href="tel:+4915203693944" className="underline" style={{ color: NAVY }}>+49 152 03693944</a></p>
             <p>Website: <a href="https://www.olawaleawe.org" className="underline" style={{ color: NAVY }}>www.olawaleawe.org</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/o-olawale-awe" className="underline" style={{ color: NAVY }}>linkedin.com/in/O.Olawale Awe</a></p>
           </div>
