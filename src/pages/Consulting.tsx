@@ -13,7 +13,7 @@ const services = [
   { icon: BarChart3, title: "Statistical Consulting", body: "Research design, hypothesis testing, regression modelling, Bayesian methods, time series analysis, and biostatistics for academic and industry clients. Ideal for PhD researchers, clinical teams, and policy institutions." },
   { icon: Cpu, title: "Machine Learning and Explainable AI", body: "Model development, interpretability (SHAP, LIME), fairness auditing, and deployment guidance. Grounded in the ICARM framework for responsible, civic-accountable machine learning." },
   { icon: GraduationCap, title: "Data Science Capacity Building", body: "Customised workshops, short courses, and curriculum design in R, Python, and applied ML for universities, research labs, and government agencies. Delivered in person or online." },
-  { icon: FileText, title: "Grant Writing and Proposal Review", body: "Strategic support for DFG, ERC, NIH, USAID, and World Bank proposals — from concept development to methods sections and budget justification. Track record across six funding agencies." },
+  { icon: FileText, title: "Grant Writing and Proposal Review", body: "Strategic support for DFG, ERC, NIH, USAID, and World Bank proposals, from concept development to methods sections and budget justification. Track record across six funding agencies." },
   { icon: Users, title: "Graduate Supervision and Mentorship", body: "MSc and PhD supervision in statistics, data science, and machine learning. 14 graduate theses supervised across AIMS Cameroon, AIMS Senegal, and Nigerian universities." },
   { icon: Mic, title: "Keynote and Invited Talks", body: "Talks on interpretable AI, civic data science, statistics education, and responsible machine learning for conferences, universities, and corporate events. 30+ international invited talks to date." },
 ];
@@ -32,7 +32,7 @@ const Consulting = () => {
       toast.error("Please complete the required fields.");
       return;
     }
-    const subject = encodeURIComponent(`Consulting enquiry — ${form.type || "General"} — ${form.name}`);
+    const subject = encodeURIComponent(`Consulting enquiry - ${form.type || "General"} - ${form.name}`);
     const body = encodeURIComponent(
       `Full name: ${form.name}\nOrganisation: ${form.org}\nCountry: ${form.country}\nType of enquiry: ${form.type}\nPreferred timeline: ${form.timeline}\n\nProject description:\n${form.description}`
     );
@@ -44,7 +44,7 @@ const Consulting = () => {
     <div style={{ fontFamily: "Inter, system-ui, sans-serif" }} className="bg-white text-[#1a1a1a]">
       <SEO
         title="Consulting Services | Prof. Olushina Olawale Awe"
-        description="Statistical and data science consulting by Prof. Olushina Olawale Awe — research design, explainable AI, training, grant support, and supervision for institutions worldwide."
+        description="Statistical and data science consulting by Prof. Olushina Olawale Awe - research design, explainable AI, training, grant support, and supervision for institutions worldwide."
         path="/consulting"
       />
 
@@ -183,7 +183,7 @@ const Consulting = () => {
             <Select value={form.timeline} onValueChange={(v) => setForm({ ...form, timeline: v })}>
               <SelectTrigger style={{ borderRadius: 4 }}><SelectValue placeholder="Preferred timeline" /></SelectTrigger>
               <SelectContent>
-                {["Urgent — within 2 weeks","1 month","3 months","Flexible"].map((o) => (
+                {["Urgent - within 2 weeks","1 month","3 months","Flexible"].map((o) => (
                   <SelectItem key={o} value={o}>{o}</SelectItem>
                 ))}
               </SelectContent>
