@@ -18,9 +18,23 @@ const Footer = () => (
       <div className="grid md:grid-cols-3 gap-8">
         <div>
           <h3 className="font-heading text-xl font-bold mb-3">Prof. Olushina Olawale Awe</h3>
-          <p className="text-primary-foreground/70 text-sm leading-relaxed">
+          <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
             Professor of Statistics & Data Science. Global thought leader in Explainable AI, Civic Data Science, and Statistical Education.
           </p>
+          <div className="space-y-2 text-sm">
+            <a href="mailto:olushina.awe@ph-ludwigsburg.de" className="text-primary-foreground/70 hover:text-accent transition-colors flex items-center gap-2">
+              <Mail size={14} /> olushina.awe@ph-ludwigsburg.de
+            </a>
+            <a href="mailto:olawaleawe@gmail.com" className="text-primary-foreground/70 hover:text-accent transition-colors flex items-center gap-2">
+              <Mail size={14} /> olawaleawe@gmail.com
+            </a>
+            <a href="tel:+4915203693944" className="text-primary-foreground/70 hover:text-accent transition-colors flex items-center gap-2">
+              <Phone size={14} /> +49 152 03693944
+            </a>
+            <p className="text-primary-foreground/70 flex items-center gap-2">
+              <MapPin size={14} /> Ludwigsburg, Germany
+            </p>
+          </div>
         </div>
         <div>
           <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-3 text-accent">Quick Links</h4>
