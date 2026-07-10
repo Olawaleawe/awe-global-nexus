@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb } from "lucide-react";
+import { BookOpen, BarChart3, Brain, HeartPulse, GraduationCap, Globe, Award, Users, FileText, Lightbulb, Mail, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-datascience.jpg";
 import profPhoto from "@/assets/prof-awe.jpg";
 import germanPresidentPhoto from "@/assets/prof-awe-german-president.jpeg.asset.json";
