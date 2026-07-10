@@ -18,7 +18,7 @@ const programs = [
 const Teaching = () => (
   <div>
     <SEO
-      title="Teaching | Data Science & Statistical Education — Prof. Olushina O. Awe"
+      title="Teaching | Data Science & Statistical Education - Prof. Olushina O. Awe"
       description="Courses, MicroMasters programs, workshops and bootcamps led by Prof. Olushina O. Awe in data science, machine learning, statistical modeling and civic data science."
       path="/teaching"
     />
