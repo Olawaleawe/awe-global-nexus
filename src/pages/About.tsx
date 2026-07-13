@@ -43,15 +43,33 @@ const About = () => (
     <section className="section-padding bg-background">
       <div className="section-container max-w-3xl">
         <SectionHeading title="Professional Biography" centered={false} />
-        <div className="prose prose-lg text-muted-foreground space-y-4">
+        <div className="prose prose-lg text-muted-foreground space-y-5">
           <p>
-            Professor Olushina Olawale Awe is an internationally recognized statistician and data scientist with over 15 years of university-level teaching, research, and graduate supervision experience in machine learning, deep learning, and data science. He has authored <strong>100+ peer-reviewed publications</strong> and edited major scholarly volumes published by Springer and Taylor & Francis. His expertise spans functional and time-series data analysis, Bayesian and computational statistics, statistical learning, health data science, and interpretable AI, with applications in public health, economics, climate, and policy analytics.
+            Professor Olushina Olawale Awe is an internationally recognized statistician, data scientist, and educator whose career spans more than 15 years of university teaching, research supervision, and institutional leadership across four continents. His work sits at the intersection of statistical theory, machine learning, and public-interest data science, with a consistent emphasis on methods that are rigorous, interpretable, and socially useful.
           </p>
           <p>
-            He currently serves as <strong>Vice President of Global Statistical Engagements with the LISA 2020 Global Network</strong> (headquartered at the University of Colorado Boulder), <strong>Council Member of the International Statistical Institute (ISI, 2025–2029)</strong>, <strong>Vice President for Membership of ISBIS (2025–2027)</strong>, <strong>Fellow of the Royal Statistical Society (2025)</strong>, Chartered Statistician (CStat), and Accredited Professional Statistician of the American Statistical Association. Under his leadership, the LISA network has trained 225 statisticians, supported 9,429 researchers across 2,719 projects, and delivered 196 short courses to 3,748 participants.
+            He began his academic training in Nigeria, earning a Bachelor of Science and a Master of Science in Statistics from the University of Ibadan and the University of Ilorin respectively, before completing his PhD in Statistics at the University of Ibadan in 2016. During his doctoral studies he was a Visiting J1 Scholar in the Department of Statistics at Virginia Tech in the United States, where he received a Certificate of Excellence in Interdisciplinary Statistics and Data Science. He subsequently held faculty positions at Obafemi Awolowo University and Anchor University Lagos, supervising graduate students and building early research programs in time-series analysis, Bayesian computation, and statistical learning.
           </p>
           <p>
-            His research agenda emphasizes <em className="text-foreground font-medium">rigorous statistical foundations for machine learning, interpretable and responsible AI, and scalable data-driven methods</em>, with a strong commitment to graduate training, interdisciplinary collaboration, and high-impact research that serves democratic governance, public health, and equitable development.
+            In 2020, Professor Awe moved to Brazil as a CAPES Postdoctoral Researcher at the Federal University of Bahia (UFBA). He later held a FAPESP International Research Fellowship at the University of Campinas (UNICAMP) from 2021 to 2023, and completed an MBA in Data Science and Analytics at the University of Sao Paulo. He currently serves as a Research Professor and Machine Learning Team Leader at UFBA's Statistics Laboratory for Learning and Data Science (SaLLy), while maintaining active collaborations with researchers across Latin America, Europe, Africa, and North America.
+          </p>
+          <p>
+            Since 2025, Professor Awe has been an Alexander von Humboldt Experienced Research Fellow and Visiting Professor of Statistical and Data Science Literacy at Ludwigsburg University of Education in Germany. In this role he develops curricula and research programs that strengthen quantitative literacy among educators, policymakers, and early-career researchers. He is also a Distinguished Professor of Data Science at Miva University in Abuja, Nigeria, where he supports doctoral training and institutional capacity building.
+          </p>
+          <p>
+            Professor Awe has authored or co-authored <strong>more than 100 peer-reviewed publications</strong> in statistics, machine learning, and interdisciplinary data science, and has edited major scholarly volumes published by Springer and Taylor & Francis. His research addresses functional and time-series data analysis, Bayesian and computational statistics, deep learning, explainable AI, health data science, and civic data science, with applications in public health, climate, agriculture, economics, education, and democratic governance.
+          </p>
+          <p>
+            Beyond research, he holds several prominent leadership roles. He is <strong>Vice President of Global Statistical Engagements for the LISA 2020 Global Network</strong>, headquartered at the University of Colorado Boulder, where he helps coordinate a worldwide community of statisticians working to accelerate data-driven solutions for society. He is a <strong>Council Member of the International Statistical Institute (ISI, 2025–2029)</strong>, <strong>Vice President for Membership of the International Society for Business and Industrial Statistics (ISBIS, 2025–2027)</strong>, and was elected <strong>Fellow of the Royal Statistical Society in 2025</strong>. He also holds the Accredited Professional Statistician (PStat) credential from the American Statistical Association and Chartered Statistician (CStat) status.
+          </p>
+          <p>
+            Under his leadership, the LISA 2020 Global Network has trained 225 statisticians, supported 9,429 researchers across 2,719 projects, and delivered 196 short courses to 3,748 participants in more than 30 countries. These numbers reflect a broader conviction: that statistical and data science capacity should be distributed globally, and that well-trained quantitative scientists are essential to addressing challenges in health, climate, governance, and economic development.
+          </p>
+          <p>
+            Professor Awe's teaching philosophy treats data literacy as a tool for empowerment and democracy. He has designed and delivered courses, MicroMasters programs, workshops, and bootcamps in data science, machine learning, statistical modeling, and civic data science through institutions and platforms including the ADA Global Academy. His instruction emphasizes reproducible research, ethical AI, interpretable models, and real-world problem solving.
+          </p>
+          <p>
+            Looking ahead, his research agenda continues to focus on rigorous statistical foundations for machine learning, interpretable and responsible AI, and scalable data-driven methods. He remains committed to graduate training, interdisciplinary collaboration, and high-impact research that serves democratic governance, public health, and equitable development.
           </p>
         </div>
       </div>
