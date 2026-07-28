@@ -65,9 +65,6 @@ const Index = () => (
               <Button asChild size="lg" variant="hero-outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
                 <Link to="/talks">Invite as Speaker</Link>
               </Button>
-              <Button asChild size="lg" variant="hero-outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                <a href="/CV-Prof-Olushina-Olawale-Awe.pdf" download>Download CV</a>
-              </Button>
             </div>
           </div>
           <div className="hidden lg:flex justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
