@@ -48,7 +48,7 @@ const Index = () => (
       <div className="relative section-container py-20 md:py-32">
         <div className="grid lg:grid-cols-[1.6fr_1fr] gap-12 items-center">
           <div className="max-w-2xl">
-            <p className="text-accent font-semibold tracking-wider uppercase text-sm mb-4 animate-fade-in">Professor of Statistics & Data Science</p>
+            <p className="text-accent font-semibold tracking-wider uppercase text-xs mb-4 animate-fade-in">Professor of Statistics and Data Science | Statistical Learning | Machine Learning | Biostatistics | International Statistical Education and Civic Data Science</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Advancing Statistics, Data Science, and Explainable AI for Global Impact
             </h1>
