@@ -33,7 +33,7 @@ const About = () => (
           <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">About</p>
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Prof. Olushina Olawale Awe</h1>
           <p className="text-primary-foreground/70 text-lg max-w-2xl">
-            Professor of Statistics & Data Science | Global Thought Leader in AI, Civic Data Science, and Statistical Education
+            Professor of Statistics and Data Science | Statistical Learning | Machine Learning | Biostatistics | International Statistical Education and Civic Data Science
           </p>
         </div>
       </div>
