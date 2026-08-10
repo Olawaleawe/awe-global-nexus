@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
+import PublicationsExplorer from "@/components/PublicationsExplorer";
 import { Brain, BarChart3, Globe, HeartPulse, ExternalLink } from "lucide-react";
 
 const themes = [
@@ -9,14 +10,6 @@ const themes = [
   { icon: BarChart3, title: "Statistical Learning Under Complex Dependencies", desc: "Novel methods for time series, spatial data, and high-dimensional inference with real-world structural constraints." },
   { icon: Globe, title: "Civic & Democratic Data Science", desc: "Using data analytics to strengthen democratic institutions, electoral processes, and governmental accountability." },
   { icon: HeartPulse, title: "Health & Malaria Modeling", desc: "Statistical approaches to disease surveillance, epidemiological modeling, and health system optimization." },
-];
-
-const publications = [
-  { title: "Interpretable Machine Learning for Civic Governance: A Framework for Accountable AI", journal: "Journal of Statistical Computation and Simulation", year: 2024 },
-  { title: "Robust Time Series Forecasting Under Non-Gaussian Dependencies", journal: "Computational Statistics & Data Analysis", year: 2023 },
-  { title: "Statistical Capacity Building in Sub-Saharan Africa: The LISA 2020 Model", journal: "Statistical Journal of the IAOS", year: 2023 },
-  { title: "Explainable Ensemble Methods for Malaria Incidence Prediction", journal: "BMC Medical Informatics", year: 2022 },
-  { title: "Human-in-the-Loop Statistical Learning for Democratic Data Systems", journal: "Data & Policy (Cambridge)", year: 2022 },
 ];
 
 const Research = () => (
@@ -53,18 +46,8 @@ const Research = () => (
 
     <section className="section-padding bg-muted">
       <div className="section-container">
-        <SectionHeading title="Featured Publications" />
-        <div className="max-w-3xl mx-auto space-y-4">
-          {publications.map((p, i) => (
-            <div key={i} className="card-elevated p-5 flex items-start gap-4">
-              <span className="text-accent font-heading font-bold text-lg shrink-0">{p.year}</span>
-              <div>
-                <h4 className="font-semibold text-foreground text-sm mb-1">{p.title}</h4>
-                <p className="text-muted-foreground text-xs italic">{p.journal}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <SectionHeading title="Publications" subtitle="Search and filter selected publications by year, topic, and type." />
+        <PublicationsExplorer />
       </div>
     </section>
 
