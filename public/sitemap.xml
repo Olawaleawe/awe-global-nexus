@@ -9,4 +9,6 @@
   <url><loc>https://olawaleawe.org/consulting</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://olawaleawe.org/news</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://olawaleawe.org/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://olawaleawe.org/software</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://olawaleawe.org/gallery</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
