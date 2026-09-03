@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Research from "./pages/Research";
+import Software from "./pages/Software";
 import Talks from "./pages/Talks";
 import Initiatives from "./pages/Initiatives";
 import Teaching from "./pages/Teaching";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/software" element={<Software />} />
             <Route path="/talks" element={<Talks />} />
             <Route path="/initiatives" element={<Initiatives />} />
             <Route path="/teaching" element={<Teaching />} />
