@@ -39,11 +39,14 @@ const FilterRow = ({
   </div>
 );
 
+const PAGE_SIZE = 20;
+
 const PublicationsExplorer = () => {
   const [query, setQuery] = useState("");
   const [year, setYear] = useState<string>(ALL);
   const [topic, setTopic] = useState<string>(ALL);
   const [type, setType] = useState<string>(ALL);
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   const years = useMemo(
     () => [ALL, ...unique(publications.map((p) => String(p.year))).sort((a, b) => Number(b) - Number(a))],
