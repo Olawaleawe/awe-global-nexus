@@ -46,7 +46,7 @@ const Research = () => (
 
     <section className="section-padding bg-muted">
       <div className="section-container">
-        <SectionHeading title="Publications" subtitle="Search and filter selected publications by year, topic, and type." />
+        <SectionHeading title="Publications" subtitle="Search and filter peer reviewed publications by year, topic, and type. The complete record is available on Google Scholar." />
         <PublicationsExplorer />
       </div>
     </section>
