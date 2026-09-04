@@ -82,6 +82,12 @@ const PublicationsExplorer = () => {
     setYear(ALL);
     setTopic(ALL);
     setType(ALL);
+    setVisible(PAGE_SIZE);
+  };
+
+  const pick = (fn: (v: string) => void) => (v: string) => {
+    fn(v);
+    setVisible(PAGE_SIZE);
   };
 
   return (
@@ -91,7 +97,10 @@ const PublicationsExplorer = () => {
         <input
           type="search"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setVisible(PAGE_SIZE);
+          }}
           placeholder="Search by title, journal, or topic"
           aria-label="Search publications"
           className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/40"
@@ -99,9 +108,9 @@ const PublicationsExplorer = () => {
       </div>
 
       <div className="space-y-3 mb-6">
-        <FilterRow label="Year" options={years} value={year} onChange={setYear} />
-        <FilterRow label="Topic" options={topics} value={topic} onChange={setTopic} />
-        <FilterRow label="Type" options={types} value={type} onChange={setType} />
+        <FilterRow label="Year" options={years} value={year} onChange={pick(setYear)} />
+        <FilterRow label="Topic" options={topics} value={topic} onChange={pick(setTopic)} />
+        <FilterRow label="Type" options={types} value={type} onChange={pick(setType)} />
       </div>
 
       <div className="flex items-center justify-between mb-4">
@@ -120,7 +129,7 @@ const PublicationsExplorer = () => {
       </div>
 
       <div className="space-y-4">
-        {results.map((p) => (
+        {results.slice(0, visible).map((p) => (
           <article key={`${p.year}-${p.title}`} className="card-elevated p-5 flex items-start gap-4">
             <span className="text-accent font-heading font-bold text-lg shrink-0">{p.year}</span>
             <div>
@@ -147,6 +156,17 @@ const PublicationsExplorer = () => {
             </div>
           </article>
         ))}
+        {visible < results.length && (
+          <div className="text-center pt-2">
+            <button
+              type="button"
+              onClick={() => setVisible((v) => v + PAGE_SIZE)}
+              className="px-6 py-2.5 rounded-full border border-accent text-accent text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Show more ({results.length - visible} remaining)
+            </button>
+          </div>
+        )}
         {results.length === 0 && (
           <p className="text-center text-muted-foreground text-sm py-10">
             No publications match your search. Try clearing the filters.
