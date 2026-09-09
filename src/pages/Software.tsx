@@ -1,20 +1,97 @@
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
-import { Settings, FileCheck, Database, Code2, LineChart, Globe, Quote } from "lucide-react";
+import { Settings, FileCheck, Database, Code2, LineChart, Globe, Quote, Github, Package, ExternalLink } from "lucide-react";
 import toolsGraphic from "@/assets/olawale-statistical-tools.png.asset.json";
 
-const rPackages = [
-  { name: "civic.icarm", desc: "Tools for civic data analysis, governance metrics, and evidence-based decision making." },
-  { name: "icarm", desc: "Advanced methods for time series analysis, forecasting, and risk modeling." },
-  { name: "arimasel", desc: "Automated ARIMA model selection, diagnostics, and forecasting." },
-  { name: "awe", desc: "Utility functions and datasets for teaching, learning, and applied statistics." },
+type Pkg = {
+  name: string;
+  desc: string;
+  cran?: string;
+  pypi?: string;
+  github?: string;
+};
+
+const rPackages: Pkg[] = [
+  {
+    name: "civic.icarm",
+    desc: "Tools for civic data analysis, governance metrics, and evidence-based decision making.",
+    cran: "https://cran.r-project.org/package=civic.icarm",
+    github: "https://github.com/Olawaleawe/civic.icarm",
+  },
+  {
+    name: "icarm",
+    desc: "Interpretable, contextual, accountable and responsible machine learning workflows.",
+    cran: "https://cran.r-project.org/package=icarm",
+    github: "https://github.com/Olawaleawe/icarm",
+  },
+  {
+    name: "arimasel",
+    desc: "Automated ARIMA model selection, diagnostics, and forecasting.",
+    github: "https://github.com/Olawaleawe/arimasel",
+  },
+  {
+    name: "awe",
+    desc: "Utility functions and datasets for teaching, learning, and applied statistics.",
+    github: "https://github.com/Olawaleawe/awe",
+  },
 ];
 
-const pythonPackages = [
-  { name: "icarm", desc: "Python tools for time series analysis, forecasting, and data-driven insights." },
-  { name: "awe-ml", desc: "Machine learning algorithms and utilities for predictive modeling and AI applications." },
-  { name: "arimasel", desc: "Streamlined ARIMA modeling and forecasting in Python." },
+const pythonPackages: Pkg[] = [
+  {
+    name: "icarm",
+    desc: "Python tools for interpretable and responsible machine learning.",
+    pypi: "https://pypi.org/project/icarm/",
+    github: "https://github.com/Olawaleawe/icarm-python",
+  },
+  {
+    name: "awe-ml",
+    desc: "Analyze, Wrap, Explain: end-to-end exploratory analysis, model selection, tuning and explainable ML.",
+    pypi: "https://pypi.org/project/awe-ml/",
+    github: "https://github.com/Olawaleawe/awe-ml",
+  },
+  {
+    name: "arimasel",
+    desc: "Seasonal ARIMA identification, selection, cross-validation and time series exploration.",
+    pypi: "https://pypi.org/project/arimasel/",
+    github: "https://github.com/Olawaleawe/arimasel-py",
+  },
 ];
+
+const PkgLinks = ({ p }: { p: Pkg }) => (
+  <div className="flex flex-wrap gap-3 mt-3">
+    {p.cran && (
+      <a
+        href={p.cran}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent underline underline-offset-4"
+      >
+        <Package size={14} /> CRAN <ExternalLink size={11} />
+      </a>
+    )}
+    {p.pypi && (
+      <a
+        href={p.pypi}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent underline underline-offset-4"
+      >
+        <Package size={14} /> PyPI <ExternalLink size={11} />
+      </a>
+    )}
+    {p.github && (
+      <a
+        href={p.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-accent underline underline-offset-4"
+      >
+        <Github size={14} /> GitHub <ExternalLink size={11} />
+      </a>
+    )}
+  </div>
+);
+
 
 const whyItems = [
   { icon: Settings, title: "Built by a Researcher", desc: "for researchers and practitioners" },
@@ -58,6 +135,7 @@ const Software = () => (
               <div key={p.name} className="p-5">
                 <h3 className="font-heading font-semibold text-primary">{p.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{p.desc}</p>
+                <PkgLinks p={p} />
               </div>
             ))}
           </div>
@@ -72,6 +150,7 @@ const Software = () => (
               <div key={p.name} className="p-5">
                 <h3 className="font-heading font-semibold text-primary">{p.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{p.desc}</p>
+                <PkgLinks p={p} />
               </div>
             ))}
           </div>
