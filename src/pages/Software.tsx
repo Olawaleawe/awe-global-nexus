@@ -150,6 +150,7 @@ const Software = () => (
               <div key={p.name} className="p-5">
                 <h3 className="font-heading font-semibold text-primary">{p.name}</h3>
                 <p className="text-muted-foreground text-sm mt-1">{p.desc}</p>
+                <PkgLinks p={p} />
               </div>
             ))}
           </div>
