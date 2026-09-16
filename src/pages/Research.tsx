@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
 import PublicationsExplorer from "@/components/PublicationsExplorer";
-import { Brain, BarChart3, Globe, HeartPulse, ExternalLink } from "lucide-react";
+import whitePaperAsset from "@/assets/sentinelpay-whitepaper.docx.asset.json";
+import { Brain, BarChart3, Globe, HeartPulse, ExternalLink, FileText, Download } from "lucide-react";
 
 const themes = [
   { icon: Brain, title: "Explainable AI & Interpretable ML", desc: "Developing transparent, human-understandable machine learning models for high-stakes decision-making in governance and public policy." },
@@ -40,6 +40,30 @@ const Research = () => (
               <p className="text-muted-foreground text-sm leading-relaxed">{t.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="section-padding bg-muted">
+      <div className="section-container">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-[auto_1fr_auto] items-center gap-6 border-y border-border py-8">
+          <div className="flex h-14 w-14 items-center justify-center rounded-md bg-primary text-primary-foreground">
+            <FileText size={28} aria-hidden="true" />
+          </div>
+          <div>
+            <p className="text-accent font-semibold uppercase tracking-wider text-xs mb-2">Featured White Paper</p>
+            <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
+              SentinelPay: An Integrated Machine Learning Framework
+            </h2>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              A framework for real-time fraud detection, merchant KYB risk scoring, and end-to-end payment security, with model explainability and regulatory considerations.
+            </p>
+          </div>
+          <Button asChild variant="hero" className="w-full md:w-auto">
+            <a href={whitePaperAsset.url} download="SentinelPay-White-Paper-Prof-Olushina-Olawale-Awe.docx">
+              <Download aria-hidden="true" /> Download paper
+            </a>
+          </Button>
         </div>
       </div>
     </section>
