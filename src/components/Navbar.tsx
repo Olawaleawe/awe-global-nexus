@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/consulting", label: "Consulting" },
   { href: "/news", label: "News" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/ebooks", label: "Ebooks" },
   { href: "/contact", label: "Contact" },
 ];
 
