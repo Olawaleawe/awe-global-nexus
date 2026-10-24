@@ -49,9 +49,11 @@ const Ebooks = () => (
                   ))}
                 </ul>
                 <div className="mt-auto pt-4 border-t border-border">
-                  <p className="text-sm font-semibold text-foreground mb-3 flex items-center gap-2">
-                    <Lock size={14} className="text-muted-foreground" aria-hidden="true" />
-                    {book.priceLabel}
+                  <p className="mb-3 flex items-baseline gap-2">
+                    <span className="font-heading text-2xl font-bold text-foreground">{book.priceLabel}</span>
+                    <span className="text-xs text-muted-foreground flex items-center gap-1">
+                      <Lock size={12} aria-hidden="true" /> Secure checkout coming soon
+                    </span>
                   </p>
                   <Button asChild variant="hero" className="w-full">
                     <a

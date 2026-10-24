@@ -16,6 +16,8 @@ export interface Ebook {
   fileUrl: string;
   fileName: string;
   priceLabel: string;
+  priceCents: number;
+  currency: "USD";
 }
 
 export const ebooks: Ebook[] = [
@@ -30,7 +32,9 @@ export const ebooks: Ebook[] = [
     cover: coverQuietlyMagnetic,
     fileUrl: quietlyMagneticFile.url,
     fileName: "Quietly-Magnetic-Prof-Olushina-Olawale-Awe.docx",
-    priceLabel: "Price to be announced",
+    priceLabel: "$9.99",
+    priceCents: 999,
+    currency: "USD",
   },
   {
     id: "the-complete-manager",
@@ -43,7 +47,9 @@ export const ebooks: Ebook[] = [
     cover: coverCompleteManager,
     fileUrl: completeManagerFile.url,
     fileName: "The-Complete-Manager-Prof-Olushina-Olawale-Awe.docx",
-    priceLabel: "Price to be announced",
+    priceLabel: "$14.99",
+    priceCents: 1499,
+    currency: "USD",
   },
   {
     id: "the-price-of-becoming-great",
@@ -56,6 +62,8 @@ export const ebooks: Ebook[] = [
     cover: coverPriceOfGreatness,
     fileUrl: priceOfGreatnessFile.url,
     fileName: "The-Price-of-Becoming-Great-Prof-Olushina-Olawale-Awe.docx",
-    priceLabel: "Price to be announced",
+    priceLabel: "$7.99",
+    priceCents: 799,
+    currency: "USD",
   },
 ];
