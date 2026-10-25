@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import SEO from "@/components/SEO";
 import { ebooks } from "@/data/ebooks";
+import { ebookSamples } from "@/data/ebookSamples";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { BookOpen, Check, Mail, Lock } from "lucide-react";
 
 const Ebooks = () => (
@@ -55,6 +57,31 @@ const Ebooks = () => (
                       <Lock size={12} aria-hidden="true" /> Secure checkout coming soon
                     </span>
                   </p>
+                  {ebookSamples[book.id] && (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="w-full mb-2">
+                          <BookOpen aria-hidden="true" /> Read a sample chapter
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
+                        <DialogHeader>
+                          <p className="text-accent font-semibold uppercase tracking-wider text-xs">
+                            Free preview from {book.title} · {ebookSamples[book.id].label}
+                          </p>
+                          <DialogTitle className="font-heading text-2xl">{ebookSamples[book.id].title}</DialogTitle>
+                        </DialogHeader>
+                        <div className="space-y-4 text-foreground leading-relaxed">
+                          {ebookSamples[book.id].paragraphs.map((p, i) => (
+                            <p key={i}>{p}</p>
+                          ))}
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-border text-sm text-muted-foreground">
+                          Enjoyed this chapter? The full book is {book.priceLabel}.
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  )}
                   <Button asChild variant="hero" className="w-full">
                     <a
                       href={`mailto:olawaleawe@gmail.com?subject=${encodeURIComponent(`Notify me: ${book.title}`)}&body=${encodeURIComponent(`Please let me know when "${book.title}" is available for purchase.`)}`}
