@@ -96,7 +96,7 @@ const Collaborate = () => {
                   {result.pathway.map((p, i) => (
                     <li key={i} className="flex gap-4">
                       <span className="flex-none h-8 w-8 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-semibold">{i + 1}</span>
-                      <div><p className="font-semibold text-foreground">{p.stage}</p><p className="text-sm text-muted-foreground">{p.detail}</p></div>
+                      <div><p className="font-semibold text-foreground">{p.stage.replace(/^\s*\d+[.)]\s*/, "")}</p><p className="text-sm text-muted-foreground">{p.detail}</p></div>
                     </li>
                   ))}
                 </ol>
