@@ -16,6 +16,7 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Ebooks from "./pages/Ebooks";
+import Collaborate from "./pages/Collaborate";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/news" element={<News />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/ebooks" element={<Ebooks />} />
+            <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

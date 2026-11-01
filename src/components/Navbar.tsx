@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/news", label: "News" },
   { href: "/gallery", label: "Gallery" },
   { href: "/ebooks", label: "Ebooks" },
+  { href: "/collaborate", label: "Collaborate" },
   { href: "/contact", label: "Contact" },
 ];
 
