@@ -3,21 +3,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { MatchSchema, type Match } from "../../supabase/functions/collaboration-match/contracts";
+import { fundingSources } from "../../supabase/functions/collaboration-match/funding";
 import SEO from "@/components/SEO";
 import SectionHeading from "@/components/SectionHeading";
-import { Loader2, Sparkles, Mail } from "lucide-react";
+import { Loader2, Sparkles, Mail, ExternalLink, Download } from "lucide-react";
 import { toast } from "sonner";
 
-interface Match {
-  summary: string;
-  expertise: { area: string; relevance: string }[];
-  pathway: { stage: string; detail: string }[];
-  funding: string[];
-  firstStep: string;
-}
-
 const Collaborate = () => {
-  const [form, setForm] = useState({ goals: "", field: "", org: "" });
+  const [form, setForm] = useState({ goals: "", field: "", org: "", country: "", careerStage: "" });
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Match | null>(null);
 
@@ -28,20 +23,61 @@ const Collaborate = () => {
       return;
     }
     setLoading(true);
+    setResult(null);
+    try {
     const { data, error } = await supabase.functions.invoke("collaboration-match", { body: form });
-    setLoading(false);
     if (error || data?.error) {
       let msg = data?.error;
-      try { msg = msg || (await (error as any)?.context?.json())?.error; } catch { /* ignore */ }
+      try { if (!msg && error && "context" in error && error.context instanceof Response) msg = (await error.context.json())?.error; } catch { /* ignore */ }
       toast.error(msg || "Could not generate suggestions. Please try again.");
       return;
     }
-    setResult(data as Match);
+    const parsed = MatchSchema.safeParse(data);
+    if (!parsed.success || parsed.data.funding.some(f => !fundingSources.some(s => s.id === f.sourceId))) {
+      toast.error("The plan could not be read. Please try again.");
+      return;
+    }
+    setResult(parsed.data);
+    } catch {
+      toast.error("Could not generate suggestions. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const planText = result ? [
+    result.summary,
+    "COLLABORATION PATHWAY",
+    ...result.pathway.map((p, i) => `${i + 1}. ${p.stage}: ${p.detail}`),
+    "FUNDING AND APPLICATIONS",
+    ...result.funding.map(f => {
+      const source = fundingSources.find(s => s.id === f.sourceId);
+      return `${source?.name}\n${f.fit}\nEligibility: ${f.eligibilityChecks.join("; ")}\n${f.applicationSteps.join("\n")}\n${source?.applicationUrl}`;
+    }),
+    "GRANT CONCEPT DRAFT (not submitted)",
+    result.grantApplication.workingTitle,
+    result.grantApplication.abstract,
+    "Objectives", ...result.grantApplication.objectives,
+    ...result.grantApplication.workPackages.map(w => `${w.title}: ${w.activities}\nDeliverable: ${w.deliverable}`),
+    "Budget categories", ...result.grantApplication.budgetItems,
+    "Documents to prepare", ...result.grantApplication.documents,
+    "Questions to resolve", ...result.grantApplication.questions,
+    "First step: " + result.firstStep,
+    "Check current calls, deadlines and eligibility with the funder. No application has been submitted.",
+  ].join("\n\n") : "";
+
+  const downloadPlan = () => {
+    const url = URL.createObjectURL(new Blob([planText], { type: "text/plain;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "collaboration-grant-plan.txt";
+    link.click();
+    URL.revokeObjectURL(url);
   };
 
   const mailto = result
     ? `mailto:olawaleawe@gmail.com?subject=${encodeURIComponent("Collaboration proposal")}&body=${encodeURIComponent(
-        `Research goals:\n${form.goals}\n\nSuggested pathway:\n${result.pathway.map((p, i) => `${i + 1}. ${p.stage}: ${p.detail}`).join("\n")}`
+        `Research goals:\n${form.goals}\n\n${result.summary}\n\nFirst step: ${result.firstStep}\n\nI would like to discuss the collaboration and grant plan.`
       )}`
     : "";
 
@@ -57,7 +93,7 @@ const Collaborate = () => {
           <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Collaborate</p>
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Find Your Collaboration Pathway</h1>
           <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-            Tell us about your research goals and receive suggestions on relevant expertise and how a partnership could take shape.
+            Describe your research goals for a collaboration pathway, relevant funding programmes and a grant concept draft.
           </p>
         </div>
       </section>
@@ -68,6 +104,8 @@ const Collaborate = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <Input placeholder="Your field (e.g. epidemiology)" maxLength={120} value={form.field} onChange={(e) => setForm({ ...form, field: e.target.value })} />
               <Input placeholder="Organisation" maxLength={160} value={form.org} onChange={(e) => setForm({ ...form, org: e.target.value })} />
+              <div className="space-y-2"><Label htmlFor="country">Country of your institution (optional)</Label><Input id="country" placeholder="e.g. Ghana" maxLength={120} value={form.country} onChange={e => setForm({ ...form, country: e.target.value })} /></div>
+              <div className="space-y-2"><Label htmlFor="career-stage">Role / career stage (optional)</Label><Input id="career-stage" placeholder="e.g. PhD student, postdoctoral researcher" maxLength={120} value={form.careerStage} onChange={e => setForm({ ...form, careerStage: e.target.value })} /></div>
             </div>
             <Textarea rows={6} maxLength={3000} placeholder="Describe your research goals, data, questions, and what you hope to achieve *" value={form.goals} onChange={(e) => setForm({ ...form, goals: e.target.value })} />
             <Button type="submit" variant="hero" className="w-full" disabled={loading}>
@@ -102,11 +140,44 @@ const Collaborate = () => {
                 </ol>
               </div>
               {result.funding.length > 0 && (
-                <div>
-                  <h3 className="font-heading font-semibold text-foreground mb-2">Possible funding routes</h3>
-                  <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">{result.funding.map((f) => <li key={f}>{f}</li>)}</ul>
+                <div className="space-y-4">
+                  <SectionHeading title="Funding & Grant Applications" />
+                  <p className="text-sm text-muted-foreground">Check current calls, deadlines and eligibility on the official websites. A recommendation does not establish eligibility or an open call.</p>
+                  {result.funding.map(f => {
+                    const source = fundingSources.find(s => s.id === f.sourceId);
+                    if (!source) return null;
+                    return <article key={f.sourceId} className="card-elevated p-5 space-y-3">
+                      <h3 className="font-heading font-semibold text-foreground">{source.name}</h3>
+                      <p className="text-sm text-foreground">{f.fit}</p>
+                      <p className="text-sm text-muted-foreground">{source.eligibility}</p>
+                      <h4 className="text-sm font-semibold">Eligibility to confirm</h4>
+                      <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">{f.eligibilityChecks.map((item, i) => <li key={i}>{item}</li>)}</ul>
+                      <h4 className="text-sm font-semibold">Application steps</h4>
+                      <ol className="list-decimal pl-5 text-sm text-muted-foreground space-y-1">{f.applicationSteps.map((item, i) => <li key={i}>{item}</li>)}</ol>
+                      <div className="flex flex-wrap gap-2">
+                        <Button asChild variant="outline" size="sm"><a href={source.programmeUrl} target="_blank" rel="noopener noreferrer"><ExternalLink /> Programme details</a></Button>
+                        <Button asChild variant="outline" size="sm"><a href={source.applicationUrl} target="_blank" rel="noopener noreferrer"><ExternalLink /> Official application portal</a></Button>
+                      </div>
+                    </article>;
+                  })}
                 </div>
               )}
+              <section className="space-y-5 border-t border-border pt-8">
+                <SectionHeading title="Grant Concept Draft" />
+                <p className="text-sm text-muted-foreground">Draft for discussion, not a completed or submitted application. Confirm the funder's format and requirements before applying.</p>
+                <h3 className="font-heading text-xl font-semibold">{result.grantApplication.workingTitle}</h3>
+                <p className="text-foreground leading-relaxed">{result.grantApplication.abstract}</p>
+                <h4 className="font-semibold">Research objectives</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">{result.grantApplication.objectives.map((item, i) => <li key={i}>{item}</li>)}</ul>
+                <h4 className="font-semibold">Work packages</h4>
+                {result.grantApplication.workPackages.map((w, i) => <div key={i} className="border-l-2 border-accent pl-4 space-y-1"><h5 className="font-semibold">{w.title}</h5><p className="text-sm text-muted-foreground">{w.activities}</p><p className="text-sm"><span className="font-semibold">Deliverable:</span> {w.deliverable}</p></div>)}
+                {([
+                  ["Budget categories", result.grantApplication.budgetItems],
+                  ["Documents to prepare", result.grantApplication.documents],
+                  ["Questions to resolve", result.grantApplication.questions],
+                ] as const).map(([title, items]) => <div key={title}><h4 className="font-semibold mb-2">{title}</h4><ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">{items.map((item, i) => <li key={i}>{item}</li>)}</ul></div>)}
+                <Button variant="outline" onClick={downloadPlan}><Download /> Download grant plan</Button>
+              </section>
               <div className="card-elevated p-5 text-center space-y-3">
                 <p className="text-foreground"><span className="font-semibold">First step:</span> {result.firstStep}</p>
                 <Button asChild variant="hero"><a href={mailto}><Mail /> Send this to Prof. Awe</a></Button>
