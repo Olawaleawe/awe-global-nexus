@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,6 +15,7 @@ const navLinks = [
   { href: "/news", label: "News" },
   { href: "/gallery", label: "Gallery" },
   { href: "/ebooks", label: "Ebooks" },
+  { href: "/downloads", label: "Downloads" },
   { href: "/collaborate", label: "Collaborate" },
   { href: "/contact", label: "Contact" },
 ];
@@ -30,7 +32,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden min-[1536px]:flex items-center gap-1">
           {navLinks.map((l) => (
             <Link
               key={l.href}
@@ -47,18 +49,21 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile toggle */}
-        <button
+        <Button
+          variant="ghost"
+          size="icon"
           onClick={() => setOpen(!open)}
-          className="lg:hidden p-2 text-foreground"
+          className="min-[1536px]:hidden text-foreground"
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        </Button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <nav className="lg:hidden border-t border-border bg-card px-4 pb-4">
+        <nav className="min-[1536px]:hidden border-t border-border bg-card px-4 pb-4 max-h-[calc(100dvh-4rem)] overflow-y-auto">
           {navLinks.map((l) => (
             <Link
               key={l.href}

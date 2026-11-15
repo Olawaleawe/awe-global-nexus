@@ -71,8 +71,10 @@ const Collaborate = () => {
     const link = document.createElement("a");
     link.href = url;
     link.download = "collaboration-grant-plan.txt";
+    document.body.appendChild(link);
     link.click();
-    URL.revokeObjectURL(url);
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 30_000);
   };
 
   const mailto = result
