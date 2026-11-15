@@ -52,6 +52,9 @@ const Footer = () => (
             <li>
               <a href="/CV-Prof-Olushina-Olawale-Awe.pdf" download className="text-primary-foreground/70 hover:text-accent transition-colors">Download CV</a>
             </li>
+            <li>
+              <a href="/Machine-Learning-Foundations-Prof-Olushina-Olawale-Awe.pdf" download="Machine-Learning-Foundations-Prof-Olushina-Olawale-Awe.pdf" className="text-primary-foreground/70 hover:text-accent transition-colors">Download ML Foundations book</a>
+            </li>
           </ul>
         </div>
         <div>
