@@ -6,7 +6,7 @@ import { freeMaterials } from "@/data/downloads";
 
 const Downloads = () => (
   <div>
-    <SEO title="Free Downloads | Prof. Olushina Olawale Awe" description="Download free research materials and the academic CV of Prof. Olushina Olawale Awe, including the SentinelPay white paper." path="/downloads" />
+    <SEO title="Free Downloads | Prof. Olushina Olawale Awe" description="Download free research materials from Prof. Olushina Olawale Awe, including the Machine Learning Foundations lecture notes, the SentinelPay white paper and the academic CV." path="/downloads" />
     <section className="bg-primary section-padding">
       <div className="section-container text-center">
         <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">Free materials</p>
